@@ -10,6 +10,7 @@
 #import "Vehicle.h"
 #import "Train.h"
 #import "Bicycle.h"
+#import "TandemBicycle.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -30,6 +31,13 @@ int main(int argc, const char * argv[]) {
         [bicycle1 makeNoise];
         
         NSLog(@"%@", bicycle1);
+        TandemBicycle *tandem1 = [[TandemBicycle alloc]init];
+        [tandem1 setHasBasket:TRUE];
+        [tandem1 setCurrentSpeed:5];
+        [tandem1 makeNoise];
+        
+        NSLog(@"%@", tandem1);
+        
     }
     return 0;
 }
