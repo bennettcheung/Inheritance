@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Vehicle.h"
 #import "Train.h"
+#import "Bicycle.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -23,6 +24,12 @@ int main(int argc, const char * argv[]) {
         [train1 makeNoise];
         NSLog(@"%@", train1);
         
+        Bicycle *bicycle1 = [[Bicycle alloc]init];
+        [bicycle1 setHasBasket:TRUE];
+        [bicycle1 setCurrentSpeed:5];
+        [bicycle1 makeNoise];
+        
+        NSLog(@"%@", bicycle1);
     }
     return 0;
 }
